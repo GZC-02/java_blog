@@ -37,7 +37,7 @@ jobs:
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |-
-          npm run docs:build
+          npm run build
           > src/.vuepress/dist/.nojekyll
 
       - name: 部署文档
@@ -46,4 +46,4 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }} # Settings > Secret 建立的 ACCESS_TOKEN
           # 部署文档
           branch: gh-pages
-          folder: src/.vuepress/dist
+          folder: .vuepress/dist
