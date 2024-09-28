@@ -2,7 +2,13 @@
 title: Java基础
 date: 2024/09/28
 tags:
-  - Java
+  - 注释
+  - 关键字
+  - 字面量
+  - 变量
+  - 数据类型
+  - 标识符
+  - 运算符
 categories:
   - Java
 ---

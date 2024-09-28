@@ -2,7 +2,10 @@
 title: Java基础
 date: 2024/09/28
 tags:
-  - Java
+  - 集合
+  - 包装类
+  - 方法
+  - 四种引用
 categories:
   - Java
 ---
