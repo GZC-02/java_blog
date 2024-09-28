@@ -1,0 +1,6 @@
+---
+title: Java基础
+date: 2024/09/28
+---
+
+This is api.

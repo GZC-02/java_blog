@@ -5,43 +5,86 @@ import { webpackBundler } from '@vuepress/bundler-webpack'
 
 export default defineUserConfig({
   base: '/java_blog/',
-  title: "vuepress-theme-reco",
-  description: "Just playing around",
+  title: "Java",
+  description: "编码见闻录",
   bundler: viteBundler(),
   // bundler: webpackBundler(),
   theme: recoTheme({
     // style: "@vuepress-reco/style-default",
-    logo: "/logo.png",
-    author: "reco_luan",
-    authorAvatar: "/head.png",
-    docsRepo: "https://github.com/vuepress-reco/vuepress-theme-reco-next",
+    logo: "/icon.svg",
+    author: "gzc",
+    authorAvatar: "/icon.svg",
+    docsRepo: "https://github.com/GZC-02/java_blog",
     docsBranch: "main",
     docsDir: "example",
     lastUpdatedText: "",
-    // series 为原 sidebar
+    // series 为原 sidebar 左侧边栏 - 匹配上路径就显示
     series: {
-      "/docs/theme-reco/": [
+      // "/docs/theme-reco/": [
+      //   {
+      //     text: "module one",
+      //     children: ["home", "theme"],
+      //   },
+      //   {
+      //     text: "module two",
+      //     children: ["api", "plugin"],
+      //   },
+      // ],
+      "/blogs/Java/": [
         {
-          text: "module one",
-          children: ["home", "theme"],
-        },
-        {
-          text: "module two",
-          children: ["api", "plugin"],
+          text: '基础',
+          icon: 'Document',
+          children: [
+            { text: '基础', link: '/blogs/Java/base01' },
+            { text: "注释_关键字_字面量_变量_数据类型_标识符_输入输出_运算符", link: "/blogs/Java/base02" },
+            { text: "流程控制_数组_字符串", link: "/blogs/Java/base03" },
+            { text: "集合_包装类_方法_四种引用", link: "/blogs/Java/base04" }
+          ],
         },
       ],
     },
     navbar: [
-      { text: "Home", link: "/" },
-      { text: "Categories", link: "/categories/reco/1/" },
-      { text: "Tags", link: "/tags/tag1/1/" },
+      { text: "首页", link: "/" },
       {
-        text: "Docs",
+        text: '导航',
+        icon: 'AddLocationAltFilled',
         children: [
-          { text: "vuepress-reco", link: "/docs/theme-reco/theme" },
-          { text: "vuepress-theme-reco", link: "/blogs/other/guide" },
+          {
+            text: '工具',
+            icon: 'CalendarTools',
+            link: '/docs/guide/tools' ,
+          },
+          {
+            text: '知识体系',
+            icon: 'Map',
+            link: '/docs/guide/map' ,
+          },
         ],
       },
+      {
+        text: 'Java',
+        icon: 'Document',
+        children: [
+          {
+            text: '基础',
+            children: [
+              { text: '基础', link: '/blogs/Java/base01' },
+              { text: "注释_关键字_字面量_变量_数据类型_标识符_输入输出_运算符", link: "/blogs/Java/base02" },
+              { text: "流程控制_数组_字符串", link: "/blogs/Java/base03" },
+              { text: "集合_包装类_方法_四种引用", link: "/blogs/Java/base04" }
+            ],
+          },
+        ],
+      },
+      // { text: "Categories", link: "/blogs/Java/092101" },
+      // { text: "Tags", link: "/tags/tag1/1/" },
+      // {
+      //   text: "Docs",
+      //   children: [
+      //     { text: "vuepress-reco", link: "/docs/theme-reco/theme" },
+      //     { text: "vuepress-theme-reco", link: "/blogs/other/guide" },
+      //   ],
+      // },
     ],
     bulletin: {
       body: [
@@ -97,19 +140,25 @@ export default defineUserConfig({
         },
       ],
     },
-    // commentConfig: {
-    //   type: 'valine',
-    //   // options 与 1.x 的 valineConfig 配置一致
-    //   options: {
-    //     // appId: 'xxx',
-    //     // appKey: 'xxx',
-    //     // placeholder: '填写邮箱可以收到回复提醒哦！',
-    //     // verify: true, // 验证码服务
-    //     // notify: true,
-    //     // recordIP: true,
-    //     // hideComments: true // 隐藏评论
-    //   },
-    // },
+    // 评论
+    commentConfig: {
+      type: 'giscus',
+      // options 与 1.x 的 valineConfig 配置一致
+      options: {
+        repo: 'GZC-02/java_blog',
+        repoId: 'R_kgDOM4br1Q',
+        category: 'Announcements',
+        categoryId: 'DIC_kwDOM4br1c4Ci4E_',
+        mapping: 'pathname',
+        lang: "zh-CN",
+        strict: "0",
+        reactionsEnabled: "1",
+        emitMetadata: "0",
+        inputPosition: "top",
+        theme: "preferred_color_scheme",
+        hideComments: true // 隐藏评论
+      },
+    },
   }),
   // debug: true,
 });
