@@ -3,6 +3,7 @@ import { defineUserConfig } from "vuepress";
 import theme from "./theme.js";
 
 export default defineUserConfig({
+  // 解决 打包后样式丢失
   base: "/java_blog/",
 
   lang: "zh-CN",
