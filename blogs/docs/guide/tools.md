@@ -20,3 +20,27 @@ https://theme-reco.vuejs.press/docs/guide/introduce.html
 对所有标题降一级，最小为一级标题：
 
 查找##(?=\s)替换为#
+
+::: tip
+这是一个提示
+:::
+
+::: info
+这是一个提示
+:::
+
+::: warning
+这是一个警告
+:::
+
+::: danger
+这是一个危险警告
+:::
+
+::: details
+这是一个 details 标签
+:::
+
+- [x] 打游戏
+- [ ] 学习
+
