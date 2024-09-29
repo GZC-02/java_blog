@@ -23,12 +23,12 @@ isShowTitleInHome: true
 actionText: About
 actionLink: /views/other/about
 
-#footer: # 底部模块的配置
+footer: # 底部模块的配置
 #  record: 域名备案文案
 #  recordLink: 域名备案地址
 #  cyberSecurityRecord: 公安备案文案
 #  cyberSecurityLink: 公安备案地址
-#  startYear: 2018
+  startYear: 2018
 ---
 
 ## 快速开始

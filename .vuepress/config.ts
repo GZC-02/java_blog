@@ -14,10 +14,10 @@ export default defineUserConfig({
     logo: "/icon.svg",
     author: "gzc",
     authorAvatar: "/icon.svg",
-    docsRepo: "https://github.com/GZC-02/java_blog",
+    docsRepo: "https://github.com/GZC-02/java_blog/",
     docsBranch: "main",
-    docsDir: "example",
-    lastUpdatedText: "",
+    docsDir: "./blogs",
+    lastUpdatedText: "上次更新时间",
     // series 为原 sidebar 左侧边栏 - 匹配上路径就显示
     series: {
       // "/docs/theme-reco/": [
@@ -30,15 +30,15 @@ export default defineUserConfig({
       //     children: ["api", "plugin"],
       //   },
       // ],
-      "/blogs/Java/": [
+      "/blogs/docs/Java/": [
         {
           text: '基础',
           icon: 'Document',
           children: [
-            { text: '基础', link: '/blogs/Java/base01' },
-            { text: "注释_关键字_字面量_变量_数据类型_标识符_输入输出_运算符", link: "/blogs/Java/base02" },
-            { text: "流程控制_数组_字符串", link: "/blogs/Java/base03" },
-            { text: "集合_包装类_方法_四种引用", link: "/blogs/Java/base04" }
+            { text: '基础', link: '/blogs/docs/Java/base01' },
+            { text: "注释_关键字_字面量_变量_数据类型_标识符_输入输出_运算符", link: "/blogs/docs/Java/base02" },
+            { text: "流程控制_数组_字符串", link: "/blogs/docs/Java/base03" },
+            { text: "集合_包装类_方法_四种引用", link: "/blogs/docs/Java/base04" }
           ],
         },
       ],
@@ -68,10 +68,10 @@ export default defineUserConfig({
           {
             text: '基础',
             children: [
-              { text: '基础', link: '/blogs/Java/base01' },
-              { text: "注释_关键字_字面量_变量_数据类型_标识符_输入输出_运算符", link: "/blogs/Java/base02" },
-              { text: "流程控制_数组_字符串", link: "/blogs/Java/base03" },
-              { text: "集合_包装类_方法_四种引用", link: "/blogs/Java/base04" }
+              { text: '基础', link: '/blogs/docs/Java/base01' },
+              { text: "注释_关键字_字面量_变量_数据类型_标识符_输入输出_运算符", link: "/blogs/docs/Java/base02" },
+              { text: "流程控制_数组_字符串", link: "/blogs/docs/Java/base03" },
+              { text: "集合_包装类_方法_四种引用", link: "/blogs/docs/Java/base04" }
             ],
           },
         ],
@@ -86,6 +86,7 @@ export default defineUserConfig({
       //   ],
       // },
     ],
+    // 公告
     bulletin: {
       body: [
         {
@@ -159,6 +160,17 @@ export default defineUserConfig({
         hideComments: true // 隐藏评论
       },
     },
+    tip: '提示',
+    info: '信息',
+    danger: '危险',
+    warning: '警告',
+    details: '详情',
+    backToHome: '返回首页',
+    catalogTitle: '页面导航',
+    editLinkText: '编辑当前页面',
+    notFound: '哇哦，没有发现这个页面！',
+    selectLanguageText: '语言',
+    selectLanguageName: '简体中文',
   }),
   // debug: true,
 });
