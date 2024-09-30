@@ -8,6 +8,7 @@ tags:
   - 四种引用
 categories:
   - Java
+hideComments: false
 ---
 
 ## 1. 集合（ArrayList）

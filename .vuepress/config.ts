@@ -35,10 +35,25 @@ export default defineUserConfig({
           text: '基础',
           icon: 'Document',
           children: [
-            { text: '基础', link: '/blogs/docs/Java/base01' },
-            { text: "注释_关键字_字面量_变量_数据类型_标识符_输入输出_运算符", link: "/blogs/docs/Java/base02" },
-            { text: "流程控制_数组_字符串", link: "/blogs/docs/Java/base03" },
-            { text: "集合_包装类_方法_四种引用", link: "/blogs/docs/Java/base04" }
+            { text: '基础', link: '/blogs/docs/Java/base/base01' },
+            { text: "注释_关键字_字面量_变量_数据类型_标识符_输入输出_运算符", link: "/blogs/docs/Java/base/base02" },
+            { text: "流程控制_数组_字符串", link: "/blogs/docs/Java/base/base03" },
+            { text: "集合_包装类_方法_四种引用", link: "/blogs/docs/Java/base/base04" },
+            { text: "面向对象", link: "/blogs/docs/Java/base/base05" },
+            { text: "泛型|函数编程", link: "/blogs/docs/Java/base/base06" },
+            { text: "异常|注解", link: "/blogs/docs/Java/base/base07" },
+          ],
+        },
+        {
+          text: '集合体系',
+          children: [
+            { text: "集合体系结构", link: "/blogs/docs/Java/collections/base08" },
+          ],
+        },
+        {
+          text: '集合体系',
+          children: [
+            { text: "JavaIO", link: "/blogs/docs/Java/IO/base09" },
           ],
         },
       ],
@@ -68,10 +83,25 @@ export default defineUserConfig({
           {
             text: '基础',
             children: [
-              { text: '基础', link: '/blogs/docs/Java/base01' },
-              { text: "注释_关键字_字面量_变量_数据类型_标识符_输入输出_运算符", link: "/blogs/docs/Java/base02" },
-              { text: "流程控制_数组_字符串", link: "/blogs/docs/Java/base03" },
-              { text: "集合_包装类_方法_四种引用", link: "/blogs/docs/Java/base04" }
+              { text: '基础', link: '/blogs/docs/Java/base/base01' },
+              { text: "注释_关键字_字面量_变量_数据类型_标识符_输入输出_运算符", link: "/blogs/docs/Java/base/base02" },
+              { text: "流程控制_数组_字符串", link: "/blogs/docs/Java/base/base03" },
+              { text: "集合_包装类_方法_四种引用", link: "/blogs/docs/Java/base/base04" },
+              { text: "面向对象", link: "/blogs/docs/Java/base/base05" },
+              { text: "泛型|函数编程", link: "/blogs/docs/Java/base/base06" },
+              { text: "异常|注解", link: "/blogs/docs/Java/base/base07" },
+            ],
+          },
+          {
+            text: '集合体系',
+            children: [
+              { text: "集合体系结构", link: "/blogs/docs/Java/collections/base08" },
+            ],
+          },
+          {
+            text: '集合体系',
+            children: [
+              { text: "JavaIO", link: "/blogs/docs/Java/IO/base09" },
             ],
           },
         ],

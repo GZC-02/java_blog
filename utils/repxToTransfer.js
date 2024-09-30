@@ -6,13 +6,13 @@ const fs = require('fs');
 const path = require('path');
 const {log} = require('console');
 
-const files = fs.readdirSync('../docs/guide').filter(function (file) {
-  return path.extname(file).toLowerCase() === '.md';
-});
+// const files = fs.readdirSync('../docs/Java').filter(function (file) {
+//   return path.extname(file).toLowerCase() === '.md';
+// });
+//
+// console.log(files)
 
-console.log(files)
-
-const pathString = '../blogs/Java/base04.md'
+const pathString = '../blogs/docs/Java/base09.md'
 
 fs.readFile(pathString, 'utf-8', (err, data) => {
   console.log(err);
