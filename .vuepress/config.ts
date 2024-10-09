@@ -3,23 +3,24 @@ import recoTheme from "vuepress-theme-reco";
 import { viteBundler } from '@vuepress/bundler-vite'
 // import { webpackBundler } from '@vuepress/bundler-webpack'
 import { removePwaPlugin } from '@vuepress/plugin-remove-pwa'
+import {pwaPlugin} from "@vuepress/plugin-pwa";
 
 export default defineUserConfig({
   base: '/java_blog/',
   title: "Java",
   description: "编码见闻录",
   bundler: viteBundler(),
-  head: [
-    ['link', { rel: 'icon', href: '/logo.png' }],
-    ['link', { rel: 'manifest', href: '/manifest.json' }],
-    ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
-    ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
-    ['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
-    ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
-    ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
-    ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
-  ],
+  // head: [
+  //   ['link', { rel: 'icon', href: '/images/logo.png' }],
+  //   ['link', { rel: 'manifest', href: '/manifest.json' }],
+  //   ['meta', { name: 'theme-color', content: '#3eaf7c' }],
+  //   ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
+  //   ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
+  //   ['link', { rel: 'apple-touch-icon', href: '/icons/apple-touch-icon-152x152.png' }],
+  //   ['link', { rel: 'mask-icon', href: '/icons/safari-pinned-tab.svg', color: '#3eaf7c' }],
+  //   ['meta', { name: 'msapplication-TileImage', content: '/icons/msapplication-icon-144x144.png' }],
+  //   ['meta', { name: 'msapplication-TileColor', content: '#000000' }]
+  // ],
   // bundler: webpackBundler(),
   theme: recoTheme({
 
@@ -218,13 +219,33 @@ export default defineUserConfig({
   // debug: true,
 
   plugins: [
-    removePwaPlugin({
+    pwaPlugin({
       // 选项
       // showInstall: true,
-      // updatePopup: {
-      //   message: "发现新内容可用",
-      //   buttonText: "刷新"
-      // }
+      manifest: {
+        name: "Java中文文档",
+        short_name: "JAVADocs",
+        display: "standalone",
+        background_color: "#fff",
+        start_url: "/java_blog/",
+        scope: "/java_blog/",
+        description: "Java 中文文档",
+        icons: [{
+          "src": "logo52.png",
+          "sizes": "52x52",
+          "type": "image/png"
+        },{
+          "src": "logo288.png",
+          "sizes": "288x288",
+          "type": "image/png"
+        }]
+      },
+      favicon: '/logo.png',
+      cacheImage: true,
+      update: 'hint'
+    }),
+    removePwaPlugin({
+      // 选项
     }),
   ],
 });
