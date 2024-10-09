@@ -19,26 +19,26 @@ jobs:
           # 如果你文档需要 Git 子模块，取消注释下一行
           # submodules: true
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9.x
+
       - name: 设置 Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 18.x
-#          cache: pnpm
+          cache: 'pnpm'
 
-      - name: Install PNPM
-        run: npm i -g pnpm
-
-      - name: 安装依赖
-        run: |
-          corepack enable
-          pnpm ci
+      - name: Install dependencies
+        run: pnpm install
 
       - name: 构建文档
         env:
           NODE_OPTIONS: --max_old_space_size=8192
         run: |-
-          pnpm run build
-          > .vuepress/dist/.nojekyll
+          pnpm run docs:build
+          > docs/.vuepress/dist/.nojekyll
 
       - name: 部署文档
         uses: JamesIves/github-pages-deploy-action@v4.6.4
@@ -46,4 +46,4 @@ jobs:
           token: ${{ secrets.ACCESS_TOKEN }} # Settings > Secret 建立的 ACCESS_TOKEN
           # 部署文档
           branch: gh-pages
-          folder: .vuepress/dist
+          folder: docs/.vuepress/dist
