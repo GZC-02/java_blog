@@ -1,0 +1,18 @@
+{
+  "name": "Java中文文档",
+  "short_name": "JAVADocs",
+  "display": "standalone",
+  "background_color": "#fff",
+  "start_url": "/java_blog/",
+  "scope": "/java_blog/",
+  "description": "Java 中文文档",
+  "icons": [{
+    "src": "logo52.png",
+    "sizes": "52x52",
+    "type": "image/png"
+  },{
+    "src": "logo288.png",
+    "sizes": "288x288",
+    "type": "image/png"
+  }]
+}
